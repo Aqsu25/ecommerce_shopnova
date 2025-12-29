@@ -1,0 +1,38 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\User;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
+
+class RolePermissionSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        Permission::create(['name' => 'create-products']);
+
+        Permission::create(['name' => 'edit-products']);
+
+        Permission::create(['name' => 'delete-products']);
+
+        Permission::create(['name' => 'manage-products']);
+
+        Permission::create(['name' => 'manage-orders']);
+
+        $admin = Role::create(['name' => 'admin']);
+        $admin->givePermissionTo(Permission::all());
+
+        $user = User::first();
+        if ($user) {
+            $user->assignRole('admin');
+        }
+
+        Role::create(['name' => 'user']);
+    }
+}

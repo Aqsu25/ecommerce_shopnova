@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\SubCategory;
+use Illuminate\Http\Request;
+
+class ProductCategoryController extends Controller
+{
+    public function index(Request $request)
+    {
+        // if (!empty($request->category_id)) {
+        //     $subcategories = SubCategory::where('category_id', $request->category_id)
+        //         ->orderBy('name', 'ASC')->get();
+        //     return response()->json([
+        //         'subcategories' => $subcategories
+        //     ]);
+        // }
+        // else{
+        //      return response()->json([
+        //         'subcategories' => []
+        //     ]);
+        // }
+    }
+}
