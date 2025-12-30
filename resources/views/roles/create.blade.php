@@ -1,4 +1,7 @@
-<x-app-layout>
+@extends('dashboard.dashboard')
+
+
+@section('content')
     <x-slot name="header">
         <div class="flex justify-between">
             <h2 class="font-semibold text-xl text-black-800 leading-tight">
@@ -46,4 +49,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection

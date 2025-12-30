@@ -1,18 +1,19 @@
-<x-app-layout>
-    <x-slot name="header">
+@extends('dashboard.dashboard')
+
+
+@section('content')
+
+<div class="py-12">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="flex justify-between">
             <h2 class="font-semibold text-xl text-black-800 leading-tight">
                 {{ __('Permission / Create') }}
             </h2>
             <a href="{{ route('permissions.index') }}"
-                class="bg-slate-700  border text-decoration-none text-sm text-white rounded-md px-3 py-2 hover:bg-slate-600">Back</a>
+                class="bg-blue-700  border text-decoration-none text-sm text-white  my-3 rounded-md px-3 py-2 hover:bg-blue-600">Back</a>
         </div>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="p-6 text-gray-900 dark:text-gray-100">
                     <form action="{{ route('permissions.store') }}" method="POST">
                         @csrf
                         <div>
@@ -25,11 +26,11 @@
                                 @enderror
                             </div>
                             <button type="submit"
-                                class="bg-slate-700 border text-sm text-white rounded-md px-3 py-2 my-3 hover:bg-slate-600">Submit</button>
+                                class="bg-blue-700 border text-sm text-white rounded-md px-3 py-2 my-3 hover:bg-blue-600">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection

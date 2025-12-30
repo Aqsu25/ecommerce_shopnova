@@ -1,19 +1,20 @@
-<x-app-layout>
-    <x-slot name="header">
+@extends('dashboard.dashboard')
+
+
+@section('content')
+
+
+<div class="py-12">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="flex justify-between">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('Permissions') }}
             </h2>
             <a href="{{ route('permissions.create') }}"
-                class="bg-slate-700  border text-decoration-none text-sm text-white rounded-md px-3 py-2 hover:bg-slate-600">Create</a>
-
+                class="bg-blue-700  border text-decoration-none text-sm text-white rounded-md px-3 py-2 my-3 hover:bg-blue-600">Create</a>
+        
         </div>
-    </x-slot>
-
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <x-message></x-message>
                     <table class="w-full">
@@ -57,4 +58,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection
