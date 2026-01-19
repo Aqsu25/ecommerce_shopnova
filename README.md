@@ -1,6 +1,6 @@
 # Ecommerce Project
 
-**A simple, modern, and functional eCommerce web application.**
+**A simple, modern, and functional eCommerce web application built with Laravel 12.**
 
 ---
 
@@ -18,8 +18,7 @@
 ## Technologies Used
 
 - **Frontend:** HTML, CSS, JavaScript, Tailwind CSS / Bootstrap
-- **Backend:** Laravel / Node.js / Django (replace with your backend)
-- **Database:** MySQL / PostgreSQL / MongoDB (replace with your DB)
-- **Authentication:** Built-in auth system
-- **Payment:** Stripe / PayPal (if integrated)
+- **Backend:** Laravel 12
+- **Database:** MySQL (managed with HeidiSQL)
+- **Authentication:** Laravel built-in auth system
 
